@@ -1,0 +1,133 @@
+---------------OTOBUS_APPLICATION---------------
+------------------------------------------------
+==AKTOR==
+1. ADMIN
+   - MENGELOLA DATA USER ()
+   - MENGELOLA DATA SOPIR()
+   - MENGELOLA DATA BUS()
+   - MENGELOLA DATA TRAYEK()
+   - MENGELOLA DATA KELAS()
+   - MENGELOLA DATA TIKET()
+
+2. SUPIR(UPDATE TBL_PERJALANAN)
+   - MENGUPDATE KEBERADAAN BUS
+   - MENGUPDATE JUMLAH PENUMPANG
+
+3. AGEN
+   - MENGELOLA PEMBELIAN TIKET
+
+
+--------------------------------------------------------------------------------------------------
+DB : db_otobis_dun
+-------------------
+tbl_login 
+---------
+username VARCHAR(50)*
+password VARCHAR(100)
+jabatan	VARCHAR()
+
+tbl_user
+-------
+username varchar(50) *
+password varchar(100)
+nama varchar(100)
+no_hp varchar(13)
+----------------------
+tbl_sopir
+---------
+kd_sopir VARCHAR(12) *
+nama_sopir varchar(100)
+jk varchar(9)
+alamat text
+no_hp varchar(13)
+no_sim varchar(50)
+username varchar(50) uniq
+password varchar(100)
+
+-------------------
+tbl_agen(AGN201706001)
+-------
+kd_agen VARCHAR(12)*
+nama_agen VARCHAR(100)
+alamat_agen TEXT
+no_hp VARCHAR (13)
+email VARCHAR (100)
+username VARCHAR(50)
+password VARCHAR(100)
+------------
+
+tbl_kelas
+------
+kd_kelas VARCHAR (4)*
+nama_kelas VARCHAR (50)
+harga_kelas INT (11)
+
+-------------
+tbl_trayek(TRK201706001)
+---------
+kd_trayek VARCAHRAR(12)*
+asal VARCAHAR (50)
+tujuan VACHAR (50)
+harga_trayek INT (11)
+
+-------------
+tbl_bus(BUS201706001)
+------
+kd_bus VARCHAR (12)*
+nama VARCHAR(50)
+no_polisi VARCHAR (10)
+kd_kelas VARCHAR(4) **
+
+--------------------
+tbl_tiket(TKT20170603001)
+--------
+kd_tiket VARCHAR(14) *
+kd_bus VARCHAR (12) **
+kd_trayek VARCHAR (12) **
+kd_kelas VARCHAR (4) **
+tanggal_berangkat DATE
+jam_berangkat VARCHAR(5)
+harga INT(11)
+diskon INT(2)
+jumlah_kursi INT (3)
+status VARCHAR(20)
+
+-----------------------
+tbl_pembelian (PT20170603001)
+--------------
+kd_pembelian VARCHAR(13) *
+kd_tiket VARCHAR(14) **
+tanggal_pembelian DATE
+waktu_pembelian TIMESTAMP 
+nama VARCHAR(100)
+no_hp VARCHAR(13)uniq
+email VARCHAR(100)
+alamat TEXT
+harga INT(11)
+jumlah_beli INT(2)
+total_harga INT(11)
+id_agen VARCHAR(50)
+-------------------
+
+tbl_perjalanan ()
+---------------
+kd_perjalan VARCHAR ($tanggalberangkat+jam+no_polisi (2017060416:30BK1933WKW)->(23))
+kd_tiket VARCHAR(14)
+kd_bus VARCHAR(12)
+supir_1 VARCHAR(12)
+supir_2 VARCHAR(12)
+jumlah_penumpang INT(3)
+pendapatan INT()
+tanggal_perjalanan DATE
+status TEXT()
+
+------------------qw
+CREATE VIEW qw_tiket AS SELECT tbl_tiket.kd_tiket, tbl_bus.kd_bus, tbl_bus.nama, tbl_bus.no_polisi, tbl_trayek.kd_trayek, tbl_trayek.asal, tbl_trayek.tujuan, tbl_trayek.harga_trayek, tbl_kelas.kd_kelas, tbl_kelas.nama_kelas, tbl_kelas.harga_kelas, tbl_tiket.tanggal_berangkat, tbl_tiket.jam_berangkat, tbl_tiket.harga, tbl_tiket.diskon, tbl_tiket.jumlah_kursi,tbl_tiket.status FROM tbl_tiket INNER JOIN tbl_bus ON tbl_bus.kd_bus = tbl_tiket.kd_bus 
+INNER JOIN tbl_trayek ON tbl_trayek.kd_trayek = tbl_tiket.kd_trayek 
+INNER JOIN tbl_kelas ON tbl_kelas.kd_kelas = tbl_tiket.kd_kelas
+
+
+
+
+
+
