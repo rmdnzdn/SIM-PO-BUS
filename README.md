@@ -1,8 +1,6 @@
 # Aplikasi Pengelola PO BUS
 Sebuah aplikasi berbasis web dan desktop untuk mengelola pembuatan tiket, penjualan tiket dan laporan perjalanan bus.
 
-![Foto Cover](ss_program/index.jpg "Foto Cover Aplikasi PO BUS")
-
 ## Fitur
 * Pembuatan Tiket Pada Desktop
 ![Foto Pembuatan Tiket](ss_program/tiket.png "Form Pembuatan Tiket Pada Desktop")
@@ -24,9 +22,9 @@ Sebuah aplikasi berbasis web dan desktop untuk mengelola pembuatan tiket, penjua
 
 ## Info Developer
 Jika ada pertanyaan bisa hubungi kontak dibawah : 
-* [Email](mailto:ramdanzidun@gmail.com) - ramdanzidun@gmail.com
-* [LinkedIn](https://www.linkedin.com/in/rmdnzdn/) - Muhammad Ramdan
-* [Instagram](https://www.instagram.com/rmdnzdn/) - @rmdnzdn
+* [Email](mailto:programzidun@gmail.com) - programzidun@gmail.com
+* [LinkedIn](https://www.linkedin.com/in/ramdanzidun/) - Muhammad Ramdan
+* [Instagram](https://www.instagram.com/ramdanzidun/) - @ramdanzidun
 
 
 ```
