@@ -1,3 +1,5 @@
+# SUDAH TIDAK MAINTENANCE
+
 # Aplikasi Pengelola PO BUS
 Sebuah aplikasi berbasis web dan desktop untuk mengelola pembuatan tiket, penjualan tiket dan laporan perjalanan bus.
 
@@ -20,12 +22,9 @@ Sebuah aplikasi berbasis web dan desktop untuk mengelola pembuatan tiket, penjua
 * Bootstrap 
 * Java
 
-## Info Developer
-Jika ada pertanyaan bisa hubungi kontak dibawah : 
+## Credit Developer
 * [Email](mailto:programzidun@gmail.com) - programzidun@gmail.com
 * [LinkedIn](https://www.linkedin.com/in/ramdanzidun/) - Muhammad Ramdan
-* [Instagram](https://www.instagram.com/ramdanzidun/) - @ramdanzidun
-
 
 ```
 Ku Coding Kau dengan Bismillah
